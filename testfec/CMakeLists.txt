@@ -1,0 +1,11 @@
+file (GLOB_RECURSE fec_sources1 "../lib_common/*.c")
+file (GLOB_RECURSE fec_sources2 "../lib_common/*.h")
+file (GLOB_RECURSE fec_sources3 "../lib_stable/*.c")
+file (GLOB_RECURSE fec_sources4 "../lib_stable/*.h")
+file (GLOB_RECURSE fec_sources5 "../myfec/*.cpp")
+file (GLOB_RECURSE fec_sources6 "../myfec/*.h")
+file (GLOB_RECURSE fec_sources7 "./main.cpp")
+
+set(EXECUTABLE_OUTPUT_PATH  "../../bin/")
+add_executable( testfec  ${fec_sources1} ${fec_sources2} ${fec_sources3} ${fec_sources4} ${fec_sources5} ${fec_sources6} ${fec_sources7})
+target_link_libraries( testfec m)
